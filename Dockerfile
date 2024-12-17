@@ -4,8 +4,8 @@ FROM openjdk:11-jre-slim
 # Set the working directory
 WORKDIR /app
 
-# Install tmux and other dependencies
-RUN apt-get update && apt-get install -y tmux wget git jq
+# Install tmux, curl, and other dependencies
+RUN apt-get update && apt-get install -y tmux wget git jq curl
 
 # Copy the current directory contents into the container at /app
 COPY . /app
